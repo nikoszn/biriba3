@@ -6,8 +6,8 @@ from Database.Tables.UsersTable import UsersTable
 class Database(object):
   def __init__(self):
     self.connection = None
-    self.name = "database"
-    self.user = "andreas"
+    self.name = "mydb"
+    self.user = "nikos"
     self.tables = {
       "users": UsersTable()
     }
