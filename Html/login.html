@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title> Biriba Online </title>
+  <link rel="stylesheet" href="{{static_url('style/basic.css')}}" type="text/css">
+  <link rel="stylesheet" href="{{static_url('style/login.css')}}" type="text/css">
+
+</head>
+<center>
+	<div id="welcome">
+		Welcome to
+	</div>
+	<div id="logo">
+		Biriba Online
+	</div>
+
+	<form id="loginForm" action="/login" method=POST>
+	    <input id="usernameField" name="user" type="text" placeholder="username"><br>
+	    <input id="passwordField" name="pass" type="password" placeholder="password"><br>
+	    <label><input id="rememberField" name="remember" type="checkbox" value="1"><span id="rememberText">Remember me</span></label><br>
+	    <input id="loginButton" type="submit" value="Log in"><br>
+	    <br>
+		<a id="registerHRef" href="/register">Register Here</a></span>
+	</form>
+	{% if data["failed"] %}
+		<div id="info">
+			Incorrect username or password<br>
+			<a id="reset" href="/reset">Forgot your password?</a></span>
+		<div>
+	{% end %}
+</center>
+
+</html>
